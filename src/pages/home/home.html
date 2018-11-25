@@ -12,10 +12,10 @@
     </ion-item>
 
     <ion-item>
-        <ion-label stacked>Senha</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-label id="lb-senha" stacked>Senha</ion-label>
+        <ion-input id="lb-password" type="password"></ion-input>
       </ion-item>
-      <button id="btn-entrar" ion-button block>Entrar</button>
+      <button id="btn-entrar" ion-button block (click)="login()" >Entrar</button>
     </form>
     <button id="btn-registrar"ion-button block outline>Registrar</button>
 
