@@ -1,3 +1,29 @@
 page-home {
 
+  img{
+    width: 300px;
+    align-self: center;
+    margin: auto;
+    margin-top: 25%;
+    display: block;
+    padding: 10px;
+  }
+
+  #btn-entrar{
+    margin-top: 20px;
+    background-color: #36648B;
+  }
+
+  #btn-registrar{
+    background-color: #fff;
+    border: 1px solid #36648B;
+    color: #36648B;
+  }
+
+  @media (min-width: 412px) {
+    img{
+      margin-top: 0px;
+    }
+  }
+
 }
