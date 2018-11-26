@@ -1,10 +1,7 @@
 <ion-content padding>
 
-  <img src="assets/imgs/logo-lasSystem-blue.png" alt="logo" >
-
-
-
-  <form>
+  <img src="assets/imgs/logo-lasSystem-blue.png" alt="logo" >  <form>
+   <!-- <h5>meninos & meninas</h5> -->
 
     <ion-item>
       <ion-label stacked >Email</ion-label>
@@ -15,8 +12,17 @@
         <ion-label id="lb-senha" stacked>Senha</ion-label>
         <ion-input id="lb-password" type="password"></ion-input>
       </ion-item>
-      <button id="btn-entrar" ion-button block (click)="login()" >Entrar</button>
-    </form>
-    <button id="btn-registrar"ion-button block outline>Registrar</button>
+      <ion-grid>
+        <ion-row>
+            <ion-col col-12 col-sm-0 col-md-6 col-lg-8 col-xl-8></ion-col>
+            <ion-col col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2>
+              <button id="btn-entrar" ion-button block (click)="login()" >Entrar</button>
+            </ion-col>
+            <ion-col col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2>
+                <button id="btn-registrar"ion-button block outline>Registrar</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
 
 </ion-content>
