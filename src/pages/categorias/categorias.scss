@@ -3,6 +3,7 @@ page-categorias {
   #btn-menu{
     background-color: #36648B;
     color: #fff;
+    border-radius: 15px;
   }
 
   .toolbar-title-md, .toolbar-title.toolbar-title-ios{
@@ -14,5 +15,8 @@ page-categorias {
     color: #36648B;
   }
 
+  #img-thumbnail{
+    border-radius: 10px;
+  }
 
 }
