@@ -5,12 +5,12 @@
 
     <ion-item>
       <ion-label stacked >Email</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="creds.email" name="email" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label id="lb-senha" stacked>Senha</ion-label>
-        <ion-input id="lb-password" type="password"></ion-input>
+        <ion-input [(ngModel)]="creds.senha" name="senha" id="lb-password" type="password"></ion-input>
       </ion-item>
       <ion-grid>
         <ion-row>
@@ -19,7 +19,7 @@
               <button id="btn-entrar" ion-button block (click)="login()" >Entrar</button>
             </ion-col>
             <ion-col col-12 col-sm-6 col-md-3 col-lg-2 col-xl-2>
-                <button id="btn-registrar"ion-button block outline>Registrar</button>
+                <button id="btn-registrar" ion-button block outline>Registrar</button>
             </ion-col>
           </ion-row>
         </ion-grid>
