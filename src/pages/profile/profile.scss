@@ -6,4 +6,12 @@ page-profile {
     margin: 25px auto 0 auto;
   }
 
+  @media (min-width: 412px) {
+      .circle{
+        width: 30%;
+        border-radius: 100%;
+        margin: 10px auto 0 auto;
+      }
+  }
+
 }
