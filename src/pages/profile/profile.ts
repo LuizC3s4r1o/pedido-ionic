@@ -1,6 +1,9 @@
+import { ClienteService } from './../../services/domain/cliente.service';
 import { StorageServive } from './../../services/storage.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ClienteDTO } from '../../models/cliente.dto';
+import { API_CONFIG } from '../../config/api.config';
 
 @IonicPage()
 @Component({
@@ -9,19 +12,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  email: string;
+  cliente: ClienteDTO;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public storage: StorageServive) {
+    public storage: StorageServive,
+  public clienteService: ClienteService) {
   }
 
   ionViewDidLoad() {
     let localUser = this.storage.getLocalUser();
     if(localUser && localUser.email){
-      this.email = localUser.email;
+      this.clienteService.findByEmail(localUser.email)
+        .subscribe(Response => {
+        this.cliente = Response;
+        this.getImageIfExists();
+        },
+        error => {});
     }
+  }
+
+  getImageIfExists(){
+    this.clienteService.getImageFromBucket(this.cliente.id)
+    .subscribe(response => {
+      this.cliente.imageUrl = `${API_CONFIG.bucketBaseUrl}/cp${this.cliente.id}.jpg`
+    },
+      error => {});
   }
 
 }
