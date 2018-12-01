@@ -10,3 +10,49 @@
     min-width: 36px;
     border-radius: 18px;
   }
+
+  // style for android - dialog alert
+  .alert-md > .alert-wrapper{
+    border-radius: 25px;
+  }
+
+  .alert-md > .alert-wrapper > .alert-head{
+    text-align: center;
+    background: #36648B;
+    color: #fff;
+  }
+
+  .alert-md > .alert-wrapper > .alert-message{
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .alert-md > .alert-wrapper > .alert-button-group > .alert-button.alert-button-md.alert-button-default.alert-button-default-md {
+    color: #fff;
+    background: #36648B;
+    border-radius: 100%;
+  }
+
+  // style for ios - dialog alert
+  .alert-ios > .alert-wrapper > .alert-head {
+    text-align: center;
+    background: #36648B;
+    color: #fff;
+  }
+  .alert-ios > .alert-wrapper > .alert-message {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .alert-ios > .alert-wrapper > .alert-button-group{
+    width: 45px;
+    margin-left: 80%;
+    margin-bottom: 7px;
+  }
+  .disable-hover.alert-button.alert-button-ios.alert-button-default.alert-button-default-ios{
+    color: #fff;
+    background: #36648B;
+    border-radius: 100%;
+  }
+
+

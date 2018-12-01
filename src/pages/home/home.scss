@@ -1,6 +1,6 @@
 page-home {
 
-  img{
+  #img-home{
     width: 300px;
     align-self: center;
     margin: auto;
@@ -8,6 +8,17 @@ page-home {
     display: block;
     padding: 10px;
   }
+
+  @media (min-width: 412px) {
+    #img-home{
+      width: 300px;
+      align-self: center;
+      margin: auto;
+      margin-top: 5%;
+      display: block;
+      padding: 10px;
+    }
+}
 
   h5{
     text-align: center;
@@ -29,12 +40,6 @@ page-home {
 
   .label.label-md{
     color: #36648B;
-  }
-
-  @media (min-width: 412px) {
-    img{
-      margin-top: 0px;
-    }
   }
 
 }
