@@ -2,13 +2,13 @@
 import { Injectable } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable } from 'rxjs/Rx';
-import { StorageServive } from '../services/storage.service';
+import { StorageService } from '../services/storage.service';
 import { AlertController } from 'ionic-angular';
 import { FieldMessage } from '../models/fieldMessage';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
-constructor(public storage : StorageServive, public alertCtr : AlertController) { }
+constructor(public storage : StorageService, public alertCtr : AlertController) { }
 
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
      return next.handle(req)

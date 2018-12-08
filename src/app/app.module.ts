@@ -11,9 +11,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategoriaService } from '../services/domain/categoria.service';
 import { ErrorInterceptorProvider } from '../Interceptors/error-Interceptor';
 import { AuthService } from '../services/auth.service';
-import { StorageServive } from '../services/storage.service';
+import { StorageService } from '../services/storage.service';
 import { ClienteService } from '../services/domain/cliente.service';
 import { AuthInterceptorProvider } from '../Interceptors/auth-interceptor';
+import { CartService } from '../services/domain/cart.service';
 
 @NgModule({
   declarations: [
@@ -36,9 +37,10 @@ import { AuthInterceptorProvider } from '../Interceptors/auth-interceptor';
     AuthInterceptorProvider,
     ErrorInterceptorProvider,
     AuthService,
-    StorageServive,
+    StorageService,
     ClienteService,
-    ProdutoService
+    ProdutoService,
+    CartService
   ]
 })
 export class AppModule {}

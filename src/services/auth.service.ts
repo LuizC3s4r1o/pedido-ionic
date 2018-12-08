@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CredenciaisDTO } from './../models/credenciais.dto';
 import { Injectable } from '@angular/core';
 import { API_CONFIG } from '../config/api.config';
-import { StorageServive } from './storage.service';
+import {StorageService } from './storage.service';
 import { JwtHelper} from 'angular2-jwt';
 
 @Injectable()
@@ -11,7 +11,7 @@ export class AuthService{
 
   jwtHelper: JwtHelper = new JwtHelper();
 
-  constructor(public http : HttpClient, public storage: StorageServive){
+  constructor(public http : HttpClient, public storage: StorageService){
   }
 
   authenticate(creds: CredenciaisDTO){

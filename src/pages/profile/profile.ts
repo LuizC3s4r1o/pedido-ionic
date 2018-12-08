@@ -1,5 +1,5 @@
 import { ClienteService } from './../../services/domain/cliente.service';
-import { StorageServive } from './../../services/storage.service';
+import { StorageService } from './../../services/storage.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ClienteDTO } from '../../models/cliente.dto';
@@ -17,7 +17,7 @@ export class ProfilePage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public storage: StorageServive,
+    public storage: StorageService,
   public clienteService: ClienteService) {
   }
 

@@ -3,12 +3,12 @@ import { Observable } from 'rxjs/Rx';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ClienteDTO } from '../../models/cliente.dto';
-import { StorageServive } from '../storage.service';
+import { StorageService } from '../storage.service';
 
 @Injectable()
 export class ClienteService{
 
-  constructor (public http: HttpClient, public storage: StorageServive){
+  constructor (public http: HttpClient, public storage: StorageService){
   }
 
   findByEmail(email: string) : Observable<ClienteDTO> {
