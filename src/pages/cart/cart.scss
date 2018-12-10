@@ -4,4 +4,20 @@ page-cart {
     padding: 2px;
     border-radius: 100%;
   }
+
+  .nolinebreak{
+    float: left;
+    padding-right: 10px;
+  }
+  #btn-remove, #btn-add, #color-blue{
+    color: #36648B;
+  }
+
+  #btn-cont-comprar{
+    background-color: #36648B;
+  }
+
+  #color-gray{
+    color: gray;
+  }
 }
